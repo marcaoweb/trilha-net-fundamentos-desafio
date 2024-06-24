@@ -26,9 +26,6 @@ public partial class EstacionamentoContext : DbContext
     {
         modelBuilder.Entity<Recibo>(entity =>
         {
-            entity.Property(e => e.PrecoFixo).HasDefaultValue("1");
-            entity.Property(e => e.PrecoPorHora).HasDefaultValue("1");
-
             entity.Property(e => e.PrecoFixo).HasConversion<double>();
             entity.Property(e => e.PrecoPorHora).HasConversion<double>();
             entity.Property(e => e.Total).HasConversion<double>();
